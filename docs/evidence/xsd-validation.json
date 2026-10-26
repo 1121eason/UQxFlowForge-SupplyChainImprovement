@@ -1,0 +1,21 @@
+{
+  "checked_on": "2026-10-27",
+  "schema": "OMG BPMN 2.0 schema set, existing local copy",
+  "schema_sha256": "a07c159cb0594573dd7c97b1370dd116112378f377e43c89a8bf512ac5030705",
+  "schema_network_fetch": false,
+  "models": [
+    {
+      "path": "models/flowforge-as-is.bpmn",
+      "sha256": "87e77e7cac95bf5d64b2b47bb07e5a3808f7d9a6f6e8bdb047cda2c434dd883d",
+      "xsd_valid": true,
+      "errors": []
+    },
+    {
+      "path": "models/flowforge-to-be.bpmn",
+      "sha256": "15fe5838f99a94d5525d5609ecf070284261faae6ac3d59cf6b6e6c4d91eecee",
+      "xsd_valid": true,
+      "errors": []
+    }
+  ],
+  "limits": "XSD validity only. No new native Signavio import, convention check, formal token-soundness or operational validation."
+}

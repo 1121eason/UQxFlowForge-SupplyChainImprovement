@@ -1,0 +1,36 @@
+{
+  "reviewed_on": "2026-10-27",
+  "sources": [
+    {
+      "source_filename": "Group7_FlowForge_Process_Improvement_Report_Final.pdf",
+      "source_sha256": "34ae742c0a3e9830c5432e87fe5658cdffdfb5428f753d6845c28a41bfeb703a",
+      "published_path": null,
+      "byte_preserved": null
+    },
+    {
+      "source_filename": "Group7_ASIS.bpmn",
+      "source_sha256": "87e77e7cac95bf5d64b2b47bb07e5a3808f7d9a6f6e8bdb047cda2c434dd883d",
+      "published_path": "models/flowforge-as-is.bpmn",
+      "byte_preserved": true
+    },
+    {
+      "source_filename": "Group7_TOBE.bpmn",
+      "source_sha256": "15fe5838f99a94d5525d5609ecf070284261faae6ac3d59cf6b6e6c4d91eecee",
+      "published_path": "models/flowforge-to-be.bpmn",
+      "byte_preserved": true
+    },
+    {
+      "source_filename": "ASIS.pdf",
+      "source_sha256": "90705ea2ac3cbd8323323d2db674320fe712eac3f97fb2579469176f9121d282",
+      "published_path": null,
+      "byte_preserved": null
+    },
+    {
+      "source_filename": "TOBE.pdf",
+      "source_sha256": "77110e5a65ea2c2fb0b2539da8ef18ace6f588b620ee94c04d74b2dcd4fceb3e",
+      "published_path": null,
+      "byte_preserved": null
+    }
+  ],
+  "private_source_paths_excluded": true
+}

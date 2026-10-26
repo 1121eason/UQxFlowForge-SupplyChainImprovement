@@ -1,0 +1,169 @@
+{
+  "renderer": "bpmn-js",
+  "version": "18.9.1",
+  "nativeSignavioScreenshot": false,
+  "models": [
+    {
+      "source": "models/flowforge-as-is.bpmn",
+      "parseWarnings": [],
+      "diagrams": [
+        {
+          "id": "sid-2545db14-abe9-45bd-855a-65ab69bf1c9a",
+          "element": "sid-01b0500f-6126-4ef9-a20b-26d9b9c7ae99",
+          "name": "FlowForge Solution",
+          "slug": "as-is-00",
+          "width": 1467,
+          "height": 1044,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-3eaf06e6-be38-400b-8fca-39de7d4f331b",
+          "element": "FFR_e4db280d45805632b73ed0f0bb3c5826",
+          "name": "Fulfil from spare stock",
+          "slug": "as-is-01",
+          "width": 1380,
+          "height": 400,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-c8850e9f-a0b7-48d9-bc6e-d879e089917d",
+          "element": "FFR_e2ccdc80932d5caf804b3f12170e1e39",
+          "name": "Return irrelevant part",
+          "slug": "as-is-02",
+          "width": 810,
+          "height": 470,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-592bd65e-af54-43f0-93ec-f3683c3d338d",
+          "element": "FFR_c8236c488b1a568090b2f2745c04cf14",
+          "name": "Complete daily closing",
+          "slug": "as-is-03",
+          "width": 1220,
+          "height": 610,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-0fa93bbd-dbac-4884-bee6-abc781a5396b",
+          "element": "FFR_c102b5e9226d510bad741b5b3cbb1c83",
+          "name": "Record daily returns",
+          "slug": "as-is-04",
+          "width": 1130,
+          "height": 470,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-3c2371a5-6c4b-40a6-8eb1-d7416086f4e2",
+          "element": "FFR_2aec60bcec865e10b442a839f09e0cd4",
+          "name": "Track returned parts",
+          "slug": "as-is-05",
+          "width": 1390,
+          "height": 380,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-9c2de4b4-ba43-41ed-ab5e-a6ce10f81b7b",
+          "element": "FFR_1db691f6af63517c9e9c68fd2c0ee7b9",
+          "name": "Inspect warehouse and trays",
+          "slug": "as-is-06",
+          "width": 910,
+          "height": 280,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-7fe1c922-e1d1-4320-8d73-abf57acc7c90",
+          "element": "FFR_1c5bd209d935565895d080561a3132e1",
+          "name": "Repair and test part",
+          "slug": "as-is-07",
+          "width": 1399.15625,
+          "height": 750,
+          "renderWarnings": []
+        }
+      ]
+    },
+    {
+      "source": "models/flowforge-to-be.bpmn",
+      "parseWarnings": [],
+      "diagrams": [
+        {
+          "id": "sid-26d652a2-d718-4c6e-a881-718bea89eafd",
+          "element": "sid-d13ea507-a8d3-4578-83fb-c3a6472bb24a",
+          "name": "M0 | FlowForge TO-BE overview",
+          "slug": "to-be-00",
+          "width": 1700,
+          "height": 1205,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-23265e6f-d0d2-4cd4-a5df-7a0dd2c75eb2",
+          "element": "FFR_e2ccdc80932d5caf804b3f12170e1e39",
+          "name": "T1 | Validate intake [R6]",
+          "slug": "to-be-01",
+          "width": 1885,
+          "height": 550,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-b2cb1c18-1980-40d7-9a34-57fe4889900b",
+          "element": "FFR_e4db280d45805632b73ed0f0bb3c5826",
+          "name": "T2 | Select / verify route [R4 R5]",
+          "slug": "to-be-02",
+          "width": 1885,
+          "height": 550,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-80ff2f63-f74a-4003-b41c-7b46c31504c5",
+          "element": "FFR_c8236c488b1a568090b2f2745c04cf14",
+          "name": "T4 | Controlled dispatch and reporting [R1 R4]",
+          "slug": "to-be-03",
+          "width": 1885,
+          "height": 1270,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-40299f62-4786-4617-ab07-0478d8cfbd9c",
+          "element": "FFR_2aec60bcec865e10b442a839f09e0cd4",
+          "name": "T7 | Control urgent changes [R7]",
+          "slug": "to-be-04",
+          "width": 1710,
+          "height": 395,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-8bf0a131-8408-4554-8f16-33b0bcaf6bbd",
+          "element": "FFR_1c5bd209d935565895d080561a3132e1",
+          "name": "T3 | Repair and test part [R3, R4]",
+          "slug": "to-be-05",
+          "width": 2235,
+          "height": 1415,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-927aef5d-0e67-4615-9c07-009f44e9f4c2",
+          "element": "FFR_c102b5e9226d510bad741b5b3cbb1c83",
+          "name": "T5 | Record and track returned part [R2 R4]",
+          "slug": "to-be-06",
+          "width": 2235,
+          "height": 945,
+          "renderWarnings": []
+        },
+        {
+          "id": "sid-eeb37ee7-7edc-4046-8ff5-c8ede64071c3",
+          "element": "FFR_1db691f6af63517c9e9c68fd2c0ee7b9",
+          "name": "T6 | Inspect warehouse and recover missed items [R4]",
+          "slug": "to-be-07",
+          "width": 2060,
+          "height": 705,
+          "renderWarnings": []
+        }
+      ]
+    }
+  ],
+  "rasterizer": {
+    "name": "sharp / librsvg",
+    "version": "0.35.5",
+    "librsvg": "2.63.2"
+  },
+  "previewAdjustment": "SVG viewBox padded by 12 units on each side; source node coordinates and BPMN files unchanged. Native Signavio colour styling may differ."
+}

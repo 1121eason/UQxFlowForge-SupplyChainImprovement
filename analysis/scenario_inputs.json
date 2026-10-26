@@ -1,0 +1,53 @@
+{
+  "context": "Academic case scenarios; monetary results are AUD labour-cost equivalents, not realised savings.",
+  "reference_cohort": {
+    "arrivals": 160,
+    "allocated_spare_share": 0.6,
+    "out_of_scope_share": 0.05,
+    "interstate_share_of_valid_no_spare": 0.4,
+    "illustrative_shelf_miss_share": 0.05,
+    "classification": "160 arrivals is case evidence; one request per part and mutually exclusive route denominators are analysis assumptions; shelf-miss frequency is unknown."
+  },
+  "rates_aud_per_hour": {"IM": 150, "IO": 100, "Technician": 30, "Senior": 80},
+  "recording_minutes": {
+    "dispatch_repeated_entry": 2.5,
+    "r1_verification_scenarios": [0.25, 0.5],
+    "retained_completeness_check": 10,
+    "duplicate_audit_per_return": 30,
+    "r2_output_verification_per_return": 0.5,
+    "classification": "The 30-minute audit activity is interpreted per record; an alternative daily interpretation remains possible. TO-BE verification times are proposed inputs."
+  },
+  "repair": {
+    "initial_failure_share": 0.4,
+    "conditional_subsequent_failure_share": 0.3,
+    "technician_escalation_minutes": 3,
+    "senior_repeat_minutes_scenarios": [25, 39],
+    "rebuild_plus_retest_minutes": 130,
+    "initial_pass_to_tray_minutes": 42,
+    "r3_baseline_repeat_minutes": 39,
+    "r3_targeted_repeat_minutes": 25,
+    "r3_senior_review_minutes": 3,
+    "r3_technician_capture_minutes": 0.5,
+    "r3_reuse_eligible_shares": [0.25, 0.5, 1.0],
+    "classification": "Failure rates and repair times originate in the case; Senior repetition scope is an interpretation sensitivity; review/capture time and reuse shares are proposed inputs."
+  },
+  "inventory": {
+    "daily_io_control_minutes": 111.5,
+    "shelf_miss_scenarios": [0.02, 0.05, 0.1],
+    "shelf_miss_selected_im_minutes": 10,
+    "r5_avoided_unusable_ticket_minutes": 2,
+    "reducible_control_share": 0.5,
+    "additional_scans": 320,
+    "scan_seconds_scenarios": [5, 10, 15],
+    "classification": "Daily control interpretation and selected recovery work are assumptions. R4/R5 combine controls and cohort exceptions only in a hypothetical steady-state day; scan volumes/times and reducible share are trial inputs."
+  },
+  "priority_scores": {
+    "I-01": [5, 3, 5], "I-02": [4, 5, 3], "I-03": [3, 5, 4],
+    "I-04": [2, 3, 3], "I-05": [2, 4, 3]
+  },
+  "priority_weights": {
+    "base": [0.45, 0.35, 0.2],
+    "service_led": [0.3, 0.5, 0.2],
+    "growth_led": [0.35, 0.25, 0.4]
+  }
+}

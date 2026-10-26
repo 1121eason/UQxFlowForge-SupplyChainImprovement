@@ -1,0 +1,302 @@
+{
+  "models": [
+    {
+      "path": "models/flowforge-as-is.bpmn",
+      "sha256": "87e77e7cac95bf5d64b2b47bb07e5a3808f7d9a6f6e8bdb047cda2c434dd883d",
+      "exporter": "Signavio Process Editor, http://www.signavio.com",
+      "exporterVersion": "26.42.0-20261018220513+3eb78a6",
+      "counts": {
+        "association": 1,
+        "boundaryEvent": 1,
+        "childLaneSet": 2,
+        "collaboration": 1,
+        "condition": 2,
+        "conditionExpression": 25,
+        "conditionalEventDefinition": 2,
+        "dataInput": 2,
+        "dataInputAssociation": 4,
+        "dataInputRefs": 2,
+        "dataObject": 3,
+        "dataObjectReference": 3,
+        "dataOutput": 2,
+        "dataOutputAssociation": 3,
+        "dataOutputRefs": 2,
+        "dataStore": 2,
+        "dataStoreReference": 2,
+        "definitions": 1,
+        "documentation": 92,
+        "endEvent": 13,
+        "error": 1,
+        "errorEventDefinition": 2,
+        "eventBasedGateway": 1,
+        "exclusiveGateway": 22,
+        "extensionElements": 182,
+        "flowNodeRef": 130,
+        "incoming": 131,
+        "inputSet": 3,
+        "inputSetRefs": 3,
+        "intermediateCatchEvent": 8,
+        "ioSpecification": 3,
+        "lane": 15,
+        "laneSet": 8,
+        "loopCardinality": 7,
+        "message": 4,
+        "messageEventDefinition": 3,
+        "messageFlow": 11,
+        "multiInstanceLoopCharacteristics": 7,
+        "outgoing": 131,
+        "outputSet": 4,
+        "outputSetRefs": 3,
+        "participant": 5,
+        "process": 1,
+        "sequenceFlow": 131,
+        "sourceRef": 7,
+        "startEvent": 10,
+        "subProcess": 7,
+        "targetRef": 7,
+        "task": 68,
+        "text": 6,
+        "textAnnotation": 6,
+        "timeCycle": 2,
+        "timeDate": 4,
+        "timerEventDefinition": 6
+      },
+      "diagrams": [
+        {
+          "id": "sid-2545db14-abe9-45bd-855a-65ab69bf1c9a",
+          "element": "sid-01b0500f-6126-4ef9-a20b-26d9b9c7ae99",
+          "name": "FlowForge Solution"
+        },
+        {
+          "id": "sid-3eaf06e6-be38-400b-8fca-39de7d4f331b",
+          "element": "FFR_e4db280d45805632b73ed0f0bb3c5826",
+          "name": "Fulfil from spare stock"
+        },
+        {
+          "id": "sid-c8850e9f-a0b7-48d9-bc6e-d879e089917d",
+          "element": "FFR_e2ccdc80932d5caf804b3f12170e1e39",
+          "name": "Return irrelevant part"
+        },
+        {
+          "id": "sid-592bd65e-af54-43f0-93ec-f3683c3d338d",
+          "element": "FFR_c8236c488b1a568090b2f2745c04cf14",
+          "name": "Complete daily closing"
+        },
+        {
+          "id": "sid-0fa93bbd-dbac-4884-bee6-abc781a5396b",
+          "element": "FFR_c102b5e9226d510bad741b5b3cbb1c83",
+          "name": "Record daily returns"
+        },
+        {
+          "id": "sid-3c2371a5-6c4b-40a6-8eb1-d7416086f4e2",
+          "element": "FFR_2aec60bcec865e10b442a839f09e0cd4",
+          "name": "Track returned parts"
+        },
+        {
+          "id": "sid-9c2de4b4-ba43-41ed-ab5e-a6ce10f81b7b",
+          "element": "FFR_1db691f6af63517c9e9c68fd2c0ee7b9",
+          "name": "Inspect warehouse and trays"
+        },
+        {
+          "id": "sid-7fe1c922-e1d1-4320-8d73-abf57acc7c90",
+          "element": "FFR_1c5bd209d935565895d080561a3132e1",
+          "name": "Repair and test part"
+        }
+      ],
+      "duplicate_ids": [],
+      "unresolved_references_or_endpoints": [],
+      "subprocesses_without_diagrams": [],
+      "timers": [
+        {
+          "id": "sid-85c9df8d-9b4e-4826-b81a-f1501c15990e",
+          "expressions": [
+            {
+              "kind": "timeDate",
+              "value": "nextApplicableWorkingDayAt15:00"
+            }
+          ]
+        },
+        {
+          "id": "sid-9a876ef2-03b3-4c86-ae22-407a63b33771",
+          "expressions": [
+            {
+              "kind": "timeDate",
+              "value": "applicableWorkingDayAfter15:00"
+            }
+          ]
+        },
+        {
+          "id": "sid-43dc0785-1080-4e59-9a63-1cc7abc9e595",
+          "expressions": [
+            {
+              "kind": "timeCycle",
+              "value": "eachWorkingDayAtScheduledClosingReviewAfter15:00"
+            }
+          ]
+        },
+        {
+          "id": "sid-10c3b11c-06e9-4dc1-b018-d2b879f55458",
+          "expressions": [
+            {
+              "kind": "timeDate",
+              "value": "earliest nextNoticeAt among this review case outstanding referrals"
+            }
+          ]
+        },
+        {
+          "id": "sid-1798a0d7-6a02-41ae-9c14-46260f3a3725",
+          "expressions": [
+            {
+              "kind": "timeCycle",
+              "value": "eachWorkingDayAtDailyReturnsReview"
+            }
+          ]
+        },
+        {
+          "id": "sid-7fef3063-fe73-415f-ac02-b1722154a663",
+          "expressions": [
+            {
+              "kind": "timeDate",
+              "value": "nextApplicableWorkingDayAt15:00"
+            }
+          ]
+        }
+      ],
+      "scope": "XML inventory and selected references only; no process execution, XSD, token-soundness or native convention check"
+    },
+    {
+      "path": "models/flowforge-to-be.bpmn",
+      "sha256": "15fe5838f99a94d5525d5609ecf070284261faae6ac3d59cf6b6e6c4d91eecee",
+      "exporter": "Signavio Process Editor, http://www.signavio.com",
+      "exporterVersion": "26.42.0-20261018220513+3eb78a6",
+      "counts": {
+        "collaboration": 1,
+        "condition": 1,
+        "conditionExpression": 27,
+        "conditionalEventDefinition": 1,
+        "definitions": 1,
+        "documentation": 130,
+        "endEvent": 20,
+        "error": 1,
+        "eventBasedGateway": 1,
+        "exclusiveGateway": 47,
+        "extensionElements": 419,
+        "flowNodeRef": 185,
+        "incoming": 198,
+        "intermediateCatchEvent": 6,
+        "lane": 16,
+        "laneSet": 8,
+        "manualTask": 1,
+        "message": 5,
+        "messageEventDefinition": 4,
+        "messageFlow": 10,
+        "outgoing": 198,
+        "participant": 5,
+        "process": 1,
+        "sendTask": 5,
+        "sequenceFlow": 198,
+        "serviceTask": 2,
+        "startEvent": 11,
+        "subProcess": 7,
+        "task": 85,
+        "text": 3,
+        "textAnnotation": 3,
+        "timeDate": 5,
+        "timerEventDefinition": 5
+      },
+      "diagrams": [
+        {
+          "id": "sid-26d652a2-d718-4c6e-a881-718bea89eafd",
+          "element": "sid-d13ea507-a8d3-4578-83fb-c3a6472bb24a",
+          "name": "M0 | FlowForge TO-BE overview"
+        },
+        {
+          "id": "sid-23265e6f-d0d2-4cd4-a5df-7a0dd2c75eb2",
+          "element": "FFR_e2ccdc80932d5caf804b3f12170e1e39",
+          "name": "T1 | Validate intake [R6]"
+        },
+        {
+          "id": "sid-b2cb1c18-1980-40d7-9a34-57fe4889900b",
+          "element": "FFR_e4db280d45805632b73ed0f0bb3c5826",
+          "name": "T2 | Select / verify route [R4 R5]"
+        },
+        {
+          "id": "sid-80ff2f63-f74a-4003-b41c-7b46c31504c5",
+          "element": "FFR_c8236c488b1a568090b2f2745c04cf14",
+          "name": "T4 | Controlled dispatch and reporting [R1 R4]"
+        },
+        {
+          "id": "sid-40299f62-4786-4617-ab07-0478d8cfbd9c",
+          "element": "FFR_2aec60bcec865e10b442a839f09e0cd4",
+          "name": "T7 | Control urgent changes [R7]"
+        },
+        {
+          "id": "sid-8bf0a131-8408-4554-8f16-33b0bcaf6bbd",
+          "element": "FFR_1c5bd209d935565895d080561a3132e1",
+          "name": "T3 | Repair and test part [R3, R4]"
+        },
+        {
+          "id": "sid-927aef5d-0e67-4615-9c07-009f44e9f4c2",
+          "element": "FFR_c102b5e9226d510bad741b5b3cbb1c83",
+          "name": "T5 | Record and track returned part [R2 R4]"
+        },
+        {
+          "id": "sid-eeb37ee7-7edc-4046-8ff5-c8ede64071c3",
+          "element": "FFR_1db691f6af63517c9e9c68fd2c0ee7b9",
+          "name": "T6 | Inspect warehouse and recover missed items [R4]"
+        }
+      ],
+      "duplicate_ids": [],
+      "unresolved_references_or_endpoints": [],
+      "subprocesses_without_diagrams": [],
+      "timers": [
+        {
+          "id": "sid-ea13c362-318f-479c-866f-80a7e533554c",
+          "expressions": [
+            {
+              "kind": "timeDate",
+              "value": "nextApplicableWorkingDayAt15"
+            }
+          ]
+        },
+        {
+          "id": "sid-ba4a9d79-6175-4d32-bfca-148a8f14caa5",
+          "expressions": [
+            {
+              "kind": "timeDate",
+              "value": "nextApplicableWorkingDayAfter15"
+            }
+          ]
+        },
+        {
+          "id": "sid-c794b2dc-a38d-4251-936d-d734c9bdda30",
+          "expressions": [
+            {
+              "kind": "timeDate",
+              "value": "scheduledClosingAfter15"
+            }
+          ]
+        },
+        {
+          "id": "sid-6ca421ca-651c-4570-8569-7ce28bd9103b",
+          "expressions": [
+            {
+              "kind": "timeDate",
+              "value": "earliestOutstandingNextNoticeAt"
+            }
+          ]
+        },
+        {
+          "id": "sid-0236acf1-87e4-4553-81f6-c3fac8433834",
+          "expressions": [
+            {
+              "kind": "timeDate",
+              "value": "scheduledWorkingDayReturnsReview"
+            }
+          ]
+        }
+      ],
+      "scope": "XML inventory and selected references only; no process execution, XSD, token-soundness or native convention check"
+    }
+  ]
+}

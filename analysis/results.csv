@@ -1,0 +1,48 @@
+metric,scenario,value,unit,scope
+available_spares,reference_shelf_miss_5pct,91.20,expected parts,arrival cohort
+interstate_handovers,reference_shelf_miss_5pct,27.20,expected parts,arrival cohort
+internal_workshop,reference_shelf_miss_5pct,33.60,expected parts,arrival cohort
+out_of_scope,reference_shelf_miss_5pct,8.00,expected parts,arrival cohort
+route_total,reference_shelf_miss_5pct,160.00,expected parts,arrival cohort
+selected_dispatch_population,reference_shelf_miss_5pct,118.40,expected parts,arrival cohort
+dispatch_repeated_entry,selected_routes,296.00,IM minutes,arrival cohort
+dispatch_repeated_entry_cost,selected_routes,740.00,AUD,arrival cohort
+literal_intake_and_search,12_plus_15_minutes_per_arrival,72.00,IM hours,arrival cohort; feasibility unresolved
+r1_selected_capacity_value,verify_0.25_min,666.00,AUD,arrival cohort; before failure recovery
+r1_selected_capacity_value,verify_0.5_min,592.00,AUD,arrival cohort; before failure recovery
+r1_broader_capacity_value,include_internal_repairs_verify_0.25_min,855.00,AUD,alternative boundary; not additive to selected R1
+r2_capacity_value,per_return_verification,49.17,AUD per return,per-record interpretation; before failure recovery
+escalations,reference,13.44,expected cases,arrival cohort
+rebuilds,reference,4.03,expected cases,arrival cohort
+post_failure_effort_cost,senior_repeat_25_min,1167.04,AUD,arrival cohort; not recoverable in full
+post_failure_effort_cost,senior_repeat_39_min,1417.92,AUD,arrival cohort; not recoverable in full
+technical_to_tray,full_repeat_baseline,74.40,minutes per internal case,excludes queues intake transport dispatch waiting
+r3_net_capacity_value,reuse_eligible_0.25,0.56,AUD,arrival cohort; unchanged failure rates
+r3_technical_to_tray,reuse_eligible_0.25,74.70,minutes per internal case,unchanged failure rates
+r3_net_capacity_value,reuse_eligible_0.5,63.28,AUD,arrival cohort; unchanged failure rates
+r3_technical_to_tray,reuse_eligible_0.5,73.30,minutes per internal case,unchanged failure rates
+r3_economic_failure_threshold,reuse_eligible_0.5,32.72,percent,stress test; not acceptable quality loss
+r3_net_capacity_value,reuse_eligible_1.0,188.72,AUD,arrival cohort; unchanged failure rates
+r3_technical_to_tray,reuse_eligible_1.0,70.50,minutes per internal case,unchanged failure rates
+inventory_control_and_exception_cost,shelf_miss_0.02,233.83,AUD,hypothetical steady-state day; not all avoidable
+inventory_control_and_exception_cost,shelf_miss_0.05,305.83,AUD,hypothetical steady-state day; not all avoidable
+inventory_control_and_exception_cost,shelf_miss_0.1,425.83,AUD,hypothetical steady-state day; not all avoidable
+r4_r5_net_capacity_value,scan_5_sec,72.47,AUD,hypothetical steady-state day; IO-priced scans
+r4_r5_net_capacity_value,scan_10_sec,28.03,AUD,hypothetical steady-state day; IO-priced scans
+r4_r5_net_capacity_value,scan_15_sec,-16.42,AUD,hypothetical steady-state day; IO-priced scans
+r4_r5_scan_breakeven,reference,13.15,seconds per added scan,hypothetical steady-state day
+priority_weighted_score,base_I-01,4.30,score,analyst judgement; not measured ROI
+priority_weighted_score,base_I-02,4.15,score,analyst judgement; not measured ROI
+priority_weighted_score,base_I-03,3.90,score,analyst judgement; not measured ROI
+priority_weighted_score,base_I-04,2.55,score,analyst judgement; not measured ROI
+priority_weighted_score,base_I-05,2.90,score,analyst judgement; not measured ROI
+priority_weighted_score,service_led_I-01,4.00,score,analyst judgement; not measured ROI
+priority_weighted_score,service_led_I-02,4.30,score,analyst judgement; not measured ROI
+priority_weighted_score,service_led_I-03,4.20,score,analyst judgement; not measured ROI
+priority_weighted_score,service_led_I-04,2.70,score,analyst judgement; not measured ROI
+priority_weighted_score,service_led_I-05,3.20,score,analyst judgement; not measured ROI
+priority_weighted_score,growth_led_I-01,4.50,score,analyst judgement; not measured ROI
+priority_weighted_score,growth_led_I-02,3.85,score,analyst judgement; not measured ROI
+priority_weighted_score,growth_led_I-03,3.90,score,analyst judgement; not measured ROI
+priority_weighted_score,growth_led_I-04,2.65,score,analyst judgement; not measured ROI
+priority_weighted_score,growth_led_I-05,2.90,score,analyst judgement; not measured ROI

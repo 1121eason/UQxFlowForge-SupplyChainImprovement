@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="790" viewBox="0 0 1440 790" role="img" aria-labelledby="title desc">
+<title id="title">FlowForge supply chain process improvement</title>
+<desc id="desc">A case study linking repair, inventory and reverse logistics diagnosis to seven controlled redesign proposals and measurable pilot acceptance.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#122840"/><stop offset="1" stop-color="#173f4b"/></linearGradient><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#81d9c1" stroke-width="1.5"/></marker></defs>
+<rect width="1440" height="790" rx="24" fill="url(#bg)"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="64" y="68" fill="#81d9c1" font-size="22" letter-spacing="3">SUPPLY CHAIN • OPERATIONS • PROCESS DESIGN</text>
+<text x="64" y="139" fill="#fff" font-size="54" font-weight="700">FlowForge</text>
+<text x="64" y="191" fill="#e6f1f6" font-size="31">More capacity. Preserved quality. Traceable decisions.</text>
+<g fill="#c5dce4" font-size="23"><text x="64" y="245">Intake</text><text x="244" y="245">Stock / repair</text><text x="508" y="245">Dispatch</text><text x="724" y="245">Returns</text><text x="929" y="245">Reconciliation</text></g>
+<g stroke="#81d9c1" stroke-width="2" marker-end="url(#arrow)"><path d="M153 237H211"/><path d="M412 237H472"/><path d="M616 237H684"/><path d="M824 237H891"/></g>
+<g>
+<rect x="64" y="295" width="418" height="284" rx="16" fill="#ffffff" fill-opacity=".07" stroke="#53717f"/>
+<rect x="511" y="295" width="418" height="284" rx="16" fill="#ffffff" fill-opacity=".07" stroke="#53717f"/>
+<rect x="958" y="295" width="418" height="284" rx="16" fill="#ffffff" fill-opacity=".07" stroke="#53717f"/>
+<g fill="#81d9c1" font-size="22" font-weight="700"><text x="92" y="341">01 / DIAGNOSE</text><text x="539" y="341">02 / REDESIGN</text><text x="986" y="341">03 / EVALUATE</text></g>
+<g fill="#fff" font-size="38" font-weight="700"><text x="92" y="397">5 issues assessed</text><text x="539" y="397">7 linked changes</text><text x="986" y="397">Measurable pilots</text></g>
+<g fill="#dae8ed" font-size="24"><text x="92" y="449">Lean waste and root causes</text><text x="92" y="489">Repair and inventory exposure</text><text x="92" y="529">Units and capacity challenged</text><text x="539" y="449">Capture once; reuse evidence</text><text x="539" y="489">Verify stock before outputs</text><text x="539" y="529">Retain tests and exceptions</text><text x="986" y="449">Net effort and scan overhead</text><text x="986" y="489">Quality and traceability</text><text x="986" y="529">Service-window responsiveness</text></g>
+</g>
+<path d="M64 623H1376" stroke="#53717f"/>
+<text x="64" y="672" fill="#fff" font-size="28" font-weight="700">16 BPMN diagrams</text><text x="398" y="672" fill="#fff" font-size="28" font-weight="700">Reproducible scenarios</text><text x="842" y="672" fill="#fff" font-size="28" font-weight="700">AS-IS → TO-BE → acceptance</text>
+<text x="64" y="738" fill="#c5dce4" font-size="22">Academic team case • Scenario estimates, not realised savings • Yi Cheng Lee (Eason)</text>
+</g></svg>
