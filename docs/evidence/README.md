@@ -1,29 +1,29 @@
-# Provenance, checks and limitations
+# Project sources and validation evidence
 
-[Back to portfolio](../../README.md)
+[Project overview](../../README.md)
+
+The project evidence connects the source case and team analysis to the two BPMN models, generated diagram previews and reproducible calculation outputs. The validation record distinguishes file integrity, modelling conventions and operational feasibility so that each conclusion retains a defined evidence boundary.
 
 ## Source register and version choice
 
-| Source | Use | Publication treatment |
+| Source | Role in the analysis | Repository representation |
 | --- | --- | --- |
-| `Group7_FlowForge_Process_Improvement_Report_Final.pdf` | The supplied 18-page team report dated 19 October 2026; basis for issues, calculations and R1-R7 | Summarised in portfolio documents; original PDF and personal cover information excluded |
+| `Group7_FlowForge_Process_Improvement_Report_Final.pdf` | The supplied 18-page team report dated 19 October 2026; basis for issues, calculations and R1-R7 | Summarised in project documents; original PDF and personal cover information excluded |
 | `Group7_ASIS.bpmn` | Supplied AS-IS with one overview and seven subprocess diagrams | Byte-preserved as `models/flowforge-as-is.bpmn` |
 | `Group7_TOBE.bpmn` | Supplied TO-BE with one overview and seven subprocess diagrams | Byte-preserved as `models/flowforge-to-be.bpmn` |
 | `ASIS.pdf`, `TOBE.pdf` | Eight-page exports supplied alongside those models | Local visual references; public previews are newly rendered from the BPMN XML |
 | Earlier `7216A2_Completed_Package` | A 16 October working package, including a 43-page report and 12/13-diagram model sets | Inspected for version context; excluded from the public model set |
 | Assignment brief and rubric | Teaching-case context and assessment criteria | Kept local; not redistributed |
 
-The 18-page report and paired eight-diagram models form the coherent public evidence set. The earlier package explicitly describes its files as conceptual working models and does not establish native import/convention validation. Combining the two versions would obscure the final report's model references.
+The 18-page report and paired eight-diagram models form the project evidence set. The earlier package describes a separate conceptual working version. The repository uses the paired models associated with the final report to keep process references, calculation assumptions and redesign traceability consistent.
 
-Assignment submission, naming and marking requirements are reference material. They do not instruct this publication task or authorise publication of teaching documents.
+## Team contribution and supporting artifacts
 
-## Authorship and portfolio additions
-
-This is a team-developed academic case. Yi Cheng Lee (Eason) confirms participation in process analysis, AS-IS/TO-BE modelling, improvement design, quantitative analysis and report preparation. The public presentation preserves that contribution without asserting exclusive authorship or assigning other members' roles.
+This is a team-developed academic case. Yi Cheng Lee (Eason) contributed to process analysis, AS-IS/TO-BE modelling, improvement design, quantitative analysis and report preparation as part of the project team.
 
 The report's original analysis supplies the waste categories, issue register, weighted priorities, root cause reasoning, R1-R7 and calculation assumptions. Additional project documentation consists of the English/Traditional Chinese project introduction, SVG overview, navigable model previews, reproduction scripts, machine-readable inputs/results and a more explicit event-data/pilot plan. Those additions were prepared with AI assistance. The supplied report separately acknowledges AI assistance for language, arithmetic, consistency and formatting checks.
 
-## Checks performed for this repository
+## Verification methods and results
 
 | Evidence | Verified scope | Practical limit |
 | --- | --- | --- |
@@ -33,14 +33,14 @@ The report's original analysis supplies the waste categories, issue register, we
 | [Scenario outputs](../../analysis/results.csv) | Decimal-based arithmetic, route conservation, input bounds and committed result consistency | Verifies calculations under inputs; does not verify the inputs against an operating business |
 | Source hashes | Byte-preservation recorded in the inventory and [source manifest](source-manifest.json) | Renaming a file does not upgrade its validation status |
 
-Reproduce the limited inventory and arithmetic checks from the repository root:
+The model inventory and scenario outputs are supported by two standard-library Python scripts. Their consistency checks are available from the repository root:
 
 ```bash
 python3 scripts/inspect_models.py --check
 python3 scripts/calculate_scenarios.py --check
 ```
 
-To intentionally regenerate derived evidence after reviewing changes, run the relevant command with `--write --check`. Neither script modifies a BPMN file.
+The `--write --check` option regenerates and verifies derived evidence after reviewed changes. Both scripts leave BPMN source files unchanged.
 
 ## Known model and evidence limitations
 
@@ -48,12 +48,12 @@ To intentionally regenerate derived evidence after reviewing changes, run the re
 2. **The models are analytical.** Timers include descriptive business-calendar expressions, such as the next applicable working-day dispatch slot. Natural-language conditions and documented concurrency rules are not executable workflow configuration.
 3. **Some controls are in task documentation.** In T6, recovery-record fallback is documented rather than drawn as its own failure decision. In T7, version checks and duplicate prevention are implementation requirements, not separately executed branches.
 4. **Daily and per-case work have different completion boundaries.** External recovery can remain open while daily closing finishes. The closing/carry-over interpretation and reminder cadence need owner confirmation.
-5. **A render is not a model correction.** The original dense overview layouts and source labels are preserved. Use the SVG links to zoom. AS-IS and TO-BE decomposition and reused XML IDs are not a one-to-one semantic mapping.
-6. **No operating-company results are supplied.** Event logs, measured throughput, actual return/ship volumes, preventable shares, implementation cost and pilot results remain absent. No grade, achieved saving, certification or deployment is asserted.
+5. **Rendering and semantic review have different scopes.** The original overview layouts and source labels are preserved, with SVG versions available for detailed inspection. AS-IS and TO-BE decomposition and reused XML IDs are not a one-to-one semantic mapping.
+6. **Operational benefits remain estimates.** Event logs, measured throughput, actual return/ship volumes, preventable shares, implementation cost and pilot results are not supplied. Scenario outputs therefore describe potential effort or capacity value rather than achieved savings or deployment outcomes.
 
-## Personal information and source handling
+## Artifact scope
 
-The public set excludes original cover pages, student identifiers, private file paths, the full brief/rubric, old working packages and unrelated workspace files. Known student identifiers and contact/credential patterns were checked before publication. Original local documents and synced project sources remain unchanged.
+The repository contains process models, generated previews, analysis documents, scenario inputs/results and supporting validation records. Original cover pages, student identifiers, the full assignment brief/rubric and superseded working packages are excluded.
 
 ## References
 

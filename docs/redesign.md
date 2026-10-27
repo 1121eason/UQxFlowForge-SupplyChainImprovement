@@ -1,8 +1,8 @@
 # Redesign decisions and traceability
 
-[Back to portfolio](../README.md) · [Model gallery](model-gallery.md)
+[Project overview](../README.md) · [Model gallery](model-gallery.md)
 
-The seven changes form a coordinated operating design. They retain service windows, repair assurance, physical identity, reporting and exception ownership. Automation is proposed behaviour; no working carrier integration or deployed system is evidenced.
+The redesign translates five diagnosed issues into seven coordinated process changes. Each proposal is mapped to its Lean or process redesign mechanism, TO-BE model location, responsible role and acceptance condition. The resulting operating design retains service windows, repair assurance, physical identity, reporting and exception ownership. Automation remains proposed behaviour rather than a demonstrated carrier integration or deployed system.
 
 | Change | Before → proposed behaviour | Issue / heuristic | TO-BE location | Proposed accountable role and acceptance |
 | --- | --- | --- | --- | --- |
@@ -14,17 +14,17 @@ The seven changes form a coordinated operating design. They retain service windo
 | R6 Structure intake and validate scope | Match separate documents and assess scope late → validate required references and scope earlier under an agreed record-authority rule | I-04; communication, resequencing, automation | T1 authority, legacy evidence, duplicate correlation and clarification paths | IM with client agreement: valid cases are not falsely excluded; already-arrived rejects retain physical-return handling |
 | R7 Review changes on receipt | Review after the cut-off → timestamp, correlate and assess each change against the active case and remaining window | I-05; communication, resource optimisation | T7 dispatched/not-dispatched decision and authorised plan/disposition tasks | IM and technical decision-maker: traceable accept/defer/reject outcome; completed shipment history preserved |
 
-## Important design choices
+## Control design and operating rules
 
-**Separate business states.** Repair complete, ready for dispatch, sent to subcontractor, dispatched, rejected and exception open have different meanings. Reports consume evidence of events; producing a report does not establish that a physical event occurred.
+**Distinct business states.** Repair complete, ready for dispatch, sent to subcontractor, dispatched, rejected and exception open have different meanings. Reports consume evidence of events; producing a report does not establish that a physical event occurred.
 
-**Give failures visible owners.** Data capture and output generation can fail. The proposal retains correction history, retry or controlled manual output, and reconciliation. T4/T5 draw explicit failure decisions; T6 places some fallback requirements in task documentation. T7 documents version checking and duplicate prevention as implementation requirements. These documented controls are not demonstrated software.
+**Exception ownership and reconciliation.** Data capture and output generation can fail. The proposal retains correction history, retry or controlled manual output, and reconciliation. T4/T5 draw explicit failure decisions; T6 places some fallback requirements in task documentation. T7 documents version checking and duplicate prevention as implementation requirements. These documented controls are not demonstrated software.
 
-**Preserve repair assurance.** Reuse requires sufficient diagnostic evidence. Otherwise, the full path remains. Mandatory rig tests and rebuild/retest are not removed to make a time estimate look better.
+**Repair assurance.** Reuse requires sufficient diagnostic evidence; cases without that evidence retain the full diagnostic path. Mandatory rig tests and rebuild/retest remain part of the operating design and the workload estimate.
 
-**Separate daily closing from recovery completion.** Daily closing reconciles the day's postings and assigns carry-over. Open external recovery cases remain open until physical receipt and dispatch; a timer or late notice cannot stand in for a returned part.
+**Independent closing and recovery boundaries.** Daily closing reconciles the day's postings and assigns carry-over. Open external recovery cases remain open until physical receipt and dispatch; a timer or late notice cannot stand in for a returned part.
 
-**Retain operational agreements.** An agreed electronic authority can remove unnecessary document waiting only after client approval. The 3 PM service constraint and discretionary outside-hours treatment remain. Earlier screening after a part arrives cannot recover freight already spent.
+**Client agreements and service constraints.** An agreed electronic authority can remove unnecessary document waiting only after client approval. The 3 PM service constraint and discretionary outside-hours treatment remain. Earlier screening after a part arrives cannot recover freight already spent.
 
 ## Alternatives considered
 
@@ -36,8 +36,8 @@ The seven changes form a coordinated operating design. They retain service windo
 | Make one employee's tasks parallel | A diagram cannot create resource capacity; manual work remains constrained by the performing role |
 | Remove final tests or the dispatch cut-off | Changes quality or contractual commitments; requires a separate decision and supporting evidence |
 
-## Model comparison rule
+## Model scope and traceability
 
-Both models have an overview and seven subprocess diagrams, but their decomposition differs. AS-IS returns/history are combined in TO-BE T5; dispatch is consolidated in T4. Some XML IDs are reused for different scopes. Compare business behaviour and R identifiers rather than treating a shared ID as an unchanged activity. [Model review and verification limits](evidence/README.md).
+Both models have an overview and seven subprocess diagrams, but their decomposition differs. AS-IS returns/history are combined in TO-BE T5; dispatch is consolidated in T4. Some XML IDs are reused for different scopes. The comparison therefore follows business behaviour and R identifiers, rather than assuming that a shared XML ID denotes an unchanged activity. [Model review and verification limits](evidence/README.md).
 
 Source: team report Sections 6, 9 and 10, PDF pp. 11-12 and 15-17, checked against the supplied TO-BE XML.

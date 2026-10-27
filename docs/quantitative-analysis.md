@@ -1,12 +1,12 @@
 # Quantitative analysis and decision boundaries
 
-[Back to portfolio](../README.md) · [Inputs](../analysis/scenario_inputs.json) · [Calculated results](../analysis/results.csv)
+[Project overview](../README.md) · [Inputs](../analysis/scenario_inputs.json) · [Calculated results](../analysis/results.csv)
 
-The analysis estimates activity effort from the teaching case and disclosed assumptions. It is not an operational benchmark or a simulation of executable BPMN. All monetary figures are Australian dollars at the case role rates: IM 150/hour, IO 100/hour, Technician 30/hour and Senior Technician 80/hour.
+The analysis combines route reconciliation, activity-based labour costing, expected repair-path time and sensitivity analysis to assess the redesign proposals. Inputs come from the teaching case and disclosed assumptions. Results describe analytical scenarios rather than an operational benchmark or a simulation of executable BPMN. All monetary figures are Australian dollars at the case role rates: IM 150/hour, IO 100/hour, Technician 30/hour and Senior Technician 80/hour.
 
-## 1. Reconcile the reference population
+## 1. Reference population and route reconciliation
 
-Use 160 arrivals as a reference cohort and assume one request per part. Interpret 60% spare allocation, 5% out-of-scope rejection and 35% valid no-spare work as mutually exclusive. Of the valid no-spare population, 40% goes interstate. The shelf-miss share `s` is unknown; 5% is an illustrative input.
+The reference cohort contains 160 arrivals, with one request per part assumed. The scenario treats 60% spare allocation, 5% out-of-scope rejection and 35% valid no-spare work as mutually exclusive. Of the valid no-spare population, 40% goes interstate. The shelf-miss share `s` is unknown; 5% is an illustrative input.
 
 | Route | Formula at s = 5% | Expected parts |
 | --- | --- | ---: |
@@ -18,7 +18,7 @@ Use 160 arrivals as a reference cohort and assume one request per part. Interpre
 
 Fractional results are expected counts. The described spare/interstate dispatch population `D = 118.4`; it remains constant as shelf misses move parts between those two routes. Returns `R` and actual shipments tracked that day `Q` are separate populations with unknown sizes.
 
-**Capacity challenge:** taking 12 minutes of request creation plus 15 minutes of spare searching literally per arrival gives `160 × 27 = 4,320 minutes`, or 72 IM hours. One IM cannot perform this in an assumed eight-hour productive day. Verify execution units, hands-on versus elapsed time, staffing and backlog before treating the arrival cohort as daily throughput. The analysis does not introduce convenient batching to hide this inconsistency.
+**Capacity consistency finding:** taking 12 minutes of request creation plus 15 minutes of spare searching literally per arrival gives `160 × 27 = 4,320 minutes`, or 72 IM hours. One IM cannot perform this in an assumed eight-hour productive day. The inconsistency identifies execution units, hands-on versus elapsed time, staffing and backlog as necessary validation inputs. The reference cohort therefore represents arrivals rather than established daily throughput.
 
 ## 2. Repeated recording and a bounded R1 benefit
 
@@ -84,7 +84,7 @@ At e = 50%, expected technical-to-tray time is 73.30 minutes. A rise in conditio
 
 ## 4. Stock visibility and scanning break-even
 
-The daily control cycle is assumed to contain 111.5 IO minutes. It is not all avoidable waste. Let `k` be its reducible share, `V` additional scan events and `δ` added minutes per scan. Keep the shelf-miss rate unchanged and credit only avoided unusable-ticket work:
+The daily control cycle is assumed to contain 111.5 IO minutes, only part of which may be avoidable. In the model, `k` is its reducible share, `V` is the number of additional scan events and `δ` is added minutes per scan. The scenario holds the shelf-miss rate unchanged and credits only avoided unusable-ticket work:
 
 ```text
 Selected capacity value = (111.5k - Vδ) × 100/60
@@ -101,10 +101,10 @@ For an explicitly hypothetical steady-state day with k = 50%, s = 5% and V = 320
 
 Break-even is about **13.15 seconds per added scan**. This supports selective capture and measurement before reducing physical controls. The illustration prices scans at the IO rate; an actual evaluation must use the performing role. Moving stock verification earlier avoids unusable outputs but does not itself prevent stock discrepancies or remove recovery routing.
 
-## 5. What remains unpriced
+## 5. Cost boundary and outstanding operational data
 
 Intake, urgent-change effects, actual freight, external fees, software, integration, training, support and implementation costs are not sufficiently specified. No aggregate daily saving, annualised saving, cash ROI or staffing reduction is asserted. The report's weights, route interpretation, stock-miss rates, reuse eligibility and TO-BE times are assumptions or proposed trial inputs.
 
-Run `python3 scripts/calculate_scenarios.py --check` to reproduce the displayed figures and prioritisation sensitivity. The script checks route conservation, probability bounds, unit ranges and known report results, then compares outputs with the committed CSV. It does not establish that the assumed workloads are feasible.
+The displayed figures and prioritisation sensitivities are generated by [the scenario calculation script](../scripts/calculate_scenarios.py) from explicit [inputs](../analysis/scenario_inputs.json). Its `--check` mode verifies route conservation, probability bounds, unit ranges and consistency with the committed CSV. Arithmetic consistency remains separate from operational workload feasibility.
 
 Source: team report Sections 1, 3, 4 and 7, PDF pp. 3-4, 6-9 and 12-13. [Provenance](evidence/README.md).

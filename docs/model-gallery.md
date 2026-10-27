@@ -1,10 +1,10 @@
 # AS-IS and TO-BE model gallery
 
-[Back to portfolio](../README.md) · [Design rationale](redesign.md) · [Model evidence](evidence/README.md)
+[Project overview](../README.md) · [Design rationale](redesign.md) · [Model evidence](evidence/README.md)
 
-Both supplied models contain one overview and seven subprocess diagrams. The previews below preserve the original BPMN diagram layout. They were generated with bpmn-js 18.9.1; they are not new native Signavio screenshots. Open an SVG to zoom into a dense model. Original labels and known convention limitations remain disclosed.
+The AS-IS and TO-BE models each contain one overview and seven subprocess diagrams, covering the physical and information flows across repair, inventory and logistics responsibilities. The comparison maps current-state behaviour to the seven redesign proposals. Previews preserve the original BPMN layout and were generated with bpmn-js 18.9.1; SVG versions support detailed inspection. Original labels and known convention limitations remain disclosed, and these previews are not new native Signavio screenshots.
 
-## Compare by business responsibility
+## Process coverage and redesign traceability
 
 | Responsibility | AS-IS | TO-BE | Main changes |
 | --- | --- | --- | --- |
@@ -185,8 +185,8 @@ R4: physical controls, discrepancy ownership and recovery until actual receipt a
 
 ![TO-BE - T6 / Inspect warehouse and recover missed items [R4]](assets/to-be-07.png)
 
-## Import and inspect
+## Model verification scope
 
-Download a BPMN file and import it into an authorised SAP Signavio workspace using BPMN 2.0 XML import. Inspect the overview and all seven subprocesses, read task documentation and run the workspace syntax and convention checks. Preserve warnings rather than treating a successful import or a preview without renderer warnings as full validation.
+The recorded checks cover XML structure, selected references, subprocess diagram coverage, XSD validity and preview rendering. The models also contain task-level documentation for controls that are not drawn as separate gateways. Native Signavio syntax and convention review remains a distinct validation activity; naming, outcome-matching and parent/child message-replication findings are documented with the source evidence.
 
 For the current verification scope and known naming/outcome/message-replication limitations, see [provenance and checks](evidence/README.md).

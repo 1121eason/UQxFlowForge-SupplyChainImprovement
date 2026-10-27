@@ -1,10 +1,10 @@
 # Business case and process diagnosis
 
-[Back to portfolio](../README.md)
+[Project overview](../README.md)
 
 ## Business objective and scope
 
-FlowForge is a fictional component repair and resupply business serving a major client. Its growth objective creates a practical operations question: can it support additional customers without weakening the existing service, repair assurance or tracking obligations?
+FlowForge is a fictional component repair and resupply business serving a major client. The project evaluates opportunities to release operating capacity for additional customers while preserving existing service, repair assurance and tracking obligations. The diagnosis combines Lean waste analysis, a five-issue register, weighted prioritisation and root cause analysis to establish the rationale for seven redesign proposals.
 
 The case connects four internal roles: Inventory Manager (IM), Inventory Officer (IO), Technician and Senior Technician. External participants are the client, carrier, interstate subcontractor and a distinct on-call recovery repairer. A handover to an external repairer does not mean that a part has been repaired or returned to the client.
 
@@ -37,7 +37,7 @@ Scores use analyst judgement on a 1-5 scale. Base weights are capacity exposure 
 | I-04 Intake and scope delays | Document dependencies and late checks delay valid work or create returns | 2 / 3 / 3 | 2.55 | 5 |
 | I-05 Late urgent-change review | Changes may be reviewed after the remaining service opportunity | 2 / 4 / 3 | 2.90 | 4 |
 
-The top-three set remains I-01/I-02/I-03 under service-led weights of 30%/50%/20% and growth-led weights of 35%/25%/40%; first place changes. Uncertain frequencies and consequences can change priorities, so scoring should be revisited after observation. [Reproduce the weight comparison](../analysis/results.csv).
+The top-three set remains I-01/I-02/I-03 under service-led weights of 30%/50%/20% and growth-led weights of 35%/25%/40%; first place changes. The sensitivity analysis supports a consistent priority group while showing that the ordering depends on judgement weights and uncertain operational inputs. [Priority sensitivity results](../analysis/results.csv).
 
 I-01 is the starting point because repeated capture spans several stages and constrains scalable reporting. I-02 has explicit failure rates and activity times but an uncertain preventable share. I-03 has strong traceability implications even though the stock-miss rate is unknown. Targeted intake and urgent-change controls remain necessary; integration does not automatically solve I-04 or I-05.
 
@@ -54,8 +54,8 @@ I-01 is the starting point because repeated capture spans several stages and con
 
 The case does not establish employee resistance, missing APIs or incompatible databases. Those explanations must be investigated rather than asserted. The recommendation therefore starts with common identifiers, authoritative event data and accountable exceptions instead of assuming a wholesale system replacement.
 
-## Decision
+## Recommended operating direction
 
-Pilot capture and reuse first, then test inventory visibility and evidence-based repair routing. Preserve physical verification, mandatory tests and contractual service constraints until the relevant owner has evidence to approve a change. [Redesign decisions](redesign.md) explain the seven changes; [quantitative analysis](quantitative-analysis.md) shows why their benefits remain conditional.
+The recommendation is a phased pilot beginning with controlled record capture and reuse, followed by inventory visibility and evidence-based repair routing. Physical verification, mandatory tests and contractual service constraints remain in place until the relevant owner has evidence to approve a change. [Redesign decisions](redesign.md) link the seven proposals to process changes; [quantitative analysis](quantitative-analysis.md) defines their estimated benefits and conditions.
 
 Source: team report, Sections 1-6, PDF pp. 3-12; source register and publication treatment in [provenance](evidence/README.md).
