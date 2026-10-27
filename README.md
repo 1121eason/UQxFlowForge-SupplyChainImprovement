@@ -2,32 +2,28 @@
 
 **Repair operations · Inventory control · Reverse logistics · Lean analysis · SAP Signavio · BPMN 2.0**
 
-How can a component repair business support more customers while preserving repair quality, inventory traceability and service commitments?
+An end-to-end process improvement study of a component repair and resupply business, examining how to support additional customers while preserving repair quality, inventory traceability and service commitments.
 
-This case study connects process discovery to an improvement business case: map the current operation, identify waste and capacity constraints, compare redesign options, and define how a pilot would demonstrate value. It covers request intake, spare allocation, workshop repair, external repair, dispatch, returns and daily reconciliation.
+The project combines AS-IS and TO-BE BPMN modelling, Lean waste analysis, root cause analysis and quantitative scenarios. It identifies five operational issues and develops seven coordinated redesign proposals across request intake, spare allocation, workshop repair, external repair, dispatch, returns and daily reconciliation.
 
 **[Business case](docs/business-case.md) · [AS-IS / TO-BE gallery](docs/model-gallery.md) · [Quantitative analysis](docs/quantitative-analysis.md) · [Redesign decisions](docs/redesign.md) · [繁體中文](README.zh-TW.md)**
 
 ![Supply chain improvement: from fragmented records to controlled fulfilment](docs/assets/case-overview.svg)
 
-## My contribution
-
-I participated in **process analysis, AS-IS and TO-BE BPMN modelling, improvement design, quantitative analysis and report preparation** in a University of Queensland BISM7216 team project. This repository presents that work as a professional portfolio case, with reproducible calculations and navigable model evidence.
-
 **Context:** fictional academic case, October 2026. The redesigned process is a proposal. Financial figures are scenario estimates of labour effort or capacity value; no implementation, achieved savings or production performance is claimed.
 
-## What I can bring to an operations or business analyst role
+## Analytical approach and project deliverables
 
-| Capability | Application in this project | Reviewable evidence |
+| Analysis area | Method and application | Deliverables |
 | --- | --- | --- |
 | Supply chain process discovery | Connect information, physical parts and responsibility across repair, warehouse and logistics roles | [16 BPMN diagram previews](docs/model-gallery.md), [AS-IS XML](models/flowforge-as-is.bpmn), [TO-BE XML](models/flowforge-to-be.bpmn) |
 | Lean and root cause analysis | Apply all eight waste categories; distinguish symptoms, required controls and causal hypotheses | [Five-issue register and root cause analysis](docs/business-case.md) |
-| Quantitative problem solving | Reconcile route volumes, estimate activity cost, examine repair paths and challenge capacity assumptions | [Formula walkthrough](docs/quantitative-analysis.md), [reproducible scenarios](analysis/results.csv) |
+| Quantitative analysis | Reconcile route volumes, estimate activity cost, examine repair paths and challenge capacity assumptions | [Calculations and assumptions](docs/quantitative-analysis.md), [reproducible scenarios](analysis/results.csv) |
 | Inventory and reverse logistics design | Verify and reserve stock before shipping outputs; retain return identity, traceability and exception ownership | [R2, R4 and R5](docs/redesign.md) |
 | Practical process redesign | Link seven changes to issues, heuristics, BPMN locations and acceptance conditions | [Redesign traceability](docs/redesign.md) |
 | Measurement and implementation planning | Define event data, operational owners, quality guardrails and a phased pilot | [KPI and pilot plan](docs/measurement-plan.md) |
 
-## Three findings that shaped the recommendation
+## Key findings and design decisions
 
 | Finding | Analysis | Decision |
 | --- | --- | --- |
@@ -49,11 +45,11 @@ These figures have different scopes and must not be added together. The cohort i
 
 The design improves how work is captured and coordinated while retaining necessary repair assurance and service controls. [Explore the complete rationale](docs/redesign.md).
 
-## Review in five minutes
+## My contribution
 
-1. Read the [business case](docs/business-case.md) for the problem, priorities and root causes.
-2. Compare the [AS-IS and TO-BE diagrams](docs/model-gallery.md), especially stock verification, repair escalation and dispatch reporting.
-3. Challenge the [scenario assumptions](docs/quantitative-analysis.md) and inspect the [pilot acceptance conditions](docs/measurement-plan.md).
+I participated in **process analysis, AS-IS and TO-BE BPMN modelling, improvement design, quantitative analysis and report preparation** as part of the University of Queensland BISM7216 project team. The work connects operational issues to root causes, modelled process changes, calculation assumptions and measurable acceptance conditions.
+
+## Reproducible analysis
 
 To reproduce the public numerical outputs and model inventory with Python 3.10+ and its standard library:
 
@@ -66,7 +62,7 @@ python3 scripts/inspect_models.py --check
 
 The checks compare calculations and limited XML integrity results with committed evidence. They do not execute the BPMN or replace native Signavio convention checks. [Evidence and limitations](docs/evidence/README.md).
 
-## Repository guide
+## Project documentation
 
 | Location | Contents |
 | --- | --- |
@@ -75,7 +71,6 @@ The checks compare calculations and limited XML integrity results with committed
 | [Redesign](docs/redesign.md) | R1-R7, before/after choices, responsibilities and model traceability |
 | [Measurement plan](docs/measurement-plan.md) | KPIs, data requirements, pilot stages and acceptance |
 | [Model gallery](docs/model-gallery.md) | All eight diagrams from each supplied model |
-| [Interview discussion](docs/interview-guide.md) | A concise walkthrough and questions the analysis can support |
 | `models/`, `analysis/`, `scripts/` | BPMN source, scenario inputs/results and reproduction tools |
 
-**Portfolio:** Yi Cheng Lee (Eason) · Team project, University of Queensland. The case and submitted analysis are attributed in [provenance](docs/evidence/README.md). Portfolio editing, previews and reproduction tooling were prepared with AI assistance. Assignment materials and personal student identifiers are excluded. See [usage notes](NOTICE.md).
+**Project contributor:** Yi Cheng Lee (Eason) · Team project, University of Queensland. The case and submitted analysis are attributed in [provenance](docs/evidence/README.md). Project documentation, previews and reproduction tooling were prepared with AI assistance. Assignment materials and personal student identifiers are excluded. See [usage notes](NOTICE.md).

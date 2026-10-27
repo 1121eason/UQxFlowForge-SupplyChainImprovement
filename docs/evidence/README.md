@@ -21,7 +21,7 @@ Assignment submission, naming and marking requirements are reference material. T
 
 This is a team-developed academic case. Yi Cheng Lee (Eason) confirms participation in process analysis, AS-IS/TO-BE modelling, improvement design, quantitative analysis and report preparation. The public presentation preserves that contribution without asserting exclusive authorship or assigning other members' roles.
 
-The report's original analysis supplies the waste categories, issue register, weighted priorities, root cause reasoning, R1-R7 and calculation assumptions. New portfolio work consists of the English/Traditional Chinese presentation, interview walkthrough, SVG overview, navigable model previews, reproduction scripts, machine-readable inputs/results and a more explicit event-data/pilot plan. Those additions were prepared with AI assistance. The supplied report separately acknowledges AI assistance for language, arithmetic, consistency and formatting checks.
+The report's original analysis supplies the waste categories, issue register, weighted priorities, root cause reasoning, R1-R7 and calculation assumptions. Additional project documentation consists of the English/Traditional Chinese project introduction, SVG overview, navigable model previews, reproduction scripts, machine-readable inputs/results and a more explicit event-data/pilot plan. Those additions were prepared with AI assistance. The supplied report separately acknowledges AI assistance for language, arithmetic, consistency and formatting checks.
 
 ## Checks performed for this repository
 
